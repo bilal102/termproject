@@ -1,0 +1,17 @@
+extends ../layout 
+block content
+    h1 Add New Values
+    form(action="/products/add",method="post")
+        .form-group
+            label(for="name") Name
+            input#name(type="text" class="form-control" name="name")
+        .form-group
+            label(for="address") Address
+            input#address(type="text" class="form-control" name="address")
+        .form-group
+            label(for="dresses") No. of Dresses
+            input#dresses(type="text" class="form-control" name="dresses")
+        .form-group
+            label(for="size") Size
+            input#size(type="text" class="form-control" name="size")        
+        input(type="submit", value="Submit" class="btn btn-info")    

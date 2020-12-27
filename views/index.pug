@@ -1,0 +1,157 @@
+extends layout
+
+block content
+    .container
+        .text
+            center
+            h1(style='padding-top: 60px; padding-bottom: 25px; text-align:center') DARZI ONLINE - STITCH KARAO
+            p.text-center(style='padding-top: 20px; padding-bottom: 70px; font-size: 20px;')
+                | Darzi Online is an online tailor and premium quality stitching service. We pick,
+                | stitch and deliver our customer&rsquo;s clothes back at their doorsteps at the most affordable
+                | rates. Stitch Karao is an online tailor, where users can place
+                | their orders through the online platforms such as our website, Instagram,
+                | Facebook or Whatsapp.
+
+    .container-fluid(style='margin-top:50px; padding-left:30px')
+        .row
+            .col-md-6.col-sm-12.col-xs-12
+                h2 Our New Arrival Man Fashion Coat Design In Our Fashion House
+                p(style='font-size:19px; padding:15px')
+                 | Auctor condimentum magna donec tellus rutrum curabitur imperdiet montes.
+                 | Porttitor Sollicitudin scelerisque arcu elementum consectetuer commodo tempor ut.
+                 | Class Pharetra molestie habitasse non augue risus non. Bibendum massa, ligula justo
+                 | etiam, pretium luctus mollis.
+                a(href="/login")
+                    button.btn.btn-info(type='button' , style='padding:20px') SHOP NOW 
+            .col-md-6.col-sm-12.col-xs-12
+                img(src='./images/Des1.png' , width='570px')
+
+
+    .container-fluid.discounts
+        .row
+            .col-md-6.col-sm-12.col-xs-12
+                img(src='./images/Des3.png' , width='600px')
+            .col-md-6.col-sm-12.col-xs-12
+                h1(style='font-size:55px; font-weight: bold; font-style: italic') OUR SPECIALITY
+                p(style='font-size:18px; padding:30px; text-align:left') Hendrerit Dapibus Natoque class taciti, egestas orci dis dictumst duis platea penatibus. Pretium fusce. Nullam. Dui nec purus nam. Aenean quam nulla mauris primis mi blandit turpis nulla. Blandit suscipit eleifend dignissim ac faucibus. Ad primis nisl scelerisque rutrum. Fusce, sapien interdum inceptos, amet maecenas augue platea Tincidunt magnis nostra, sit imperdiet porttitor consectetuer turpis bibendum justo donec egestas aliquam sagittis velit lacinia ullamcorper pharetra sociis mus donec cum nostra.
+                a(href="/login")
+                    button.btn.btn-secondary(type='button', style='padding:20px; margin-left:80px') GET CUSTOMIZATION
+
+    .container-fluid.design
+        center
+        h1 OUR 3 STEP PROCESS
+        .row
+            .col-md-4.col-sm-12.col-xs-12.step
+                h4 1. THE FABRIC FROM YOUR SITE
+                    img(src='./images/box.png', height='100px', width='100px', alt='')
+            .col-md-4.col-sm-12.col-xs-12.step
+                h4 2. STITCH IT TO FINEST QUALITY
+                    img(src='./images/machine-removebg-preview.png', height='80px', width='80px', alt='')
+            .col-md-4.col-sm-12.col-xs-12.step
+                h4 3. DELIVER DRESS BACK TO YOU
+                    img(src='./images/delivery-removebg-preview.png', height='80px', width='80px', alt='')
+
+    .counter-up
+        .content
+            .box
+                .icon
+                    i.fas.fa-history
+                .counter 724
+                .text Working Hours
+            .box
+                .icon
+                    i.fas.fa-gift
+                .counter 508
+                .text Completed Projects
+            .box
+                .icon
+                    i.fas.fa-users
+                .counter 436
+                .text Happy Clients
+            .box
+                .icon
+                    i.fas.fa-award
+                .counter 120
+                .text Awards Received
+
+    script.
+        $(document).ready(function(){
+        $('.counter').counterUp({
+        delay: 10,
+        time: 1200
+        });
+        });
+
+    .containerfluid(style='padding: 70px; text-align:center;')
+        h2 DO YOU HAVE THE FABRIC AVAILABLE ?
+        br
+        h3 and just want the stitching?
+        br
+        p(style='font-size:18px') Fill out the order form above and our team will contact you
+        
+        p(style='font-size:18px') To discuss any details about our service,
+        
+        p(style='font-size:18px') feel free to contact us.
+
+    .container.contact-form
+        .contact-image
+            img(src='https://image.ibb.co/kUagtU/rocket_contact.png', alt='rocket_contact')
+        form(method='post')
+            h3 Contact Us
+            .row
+                .col-md-6
+                    .form-group
+                        input.form-control(type='text', name='txtName', placeholder='Your Name *', value='')
+                    .form-group
+                        input.form-control(type='text', name='txtEmail', placeholder='Your Email *', value='')
+                    .form-group
+                        input.form-control(type='text', name='txtPhone', placeholder='Your Phone Number *', value='')
+                    .form-group
+                        a(href="/")
+                            input.btnContact(type='button', name='', value='Send Message')
+                .col-md-6
+                    .form-group
+                        textarea.form-control(name='txtMsg', placeholder='Your Message ', style='width: 100%; height: 150px;')
+
+
+    .container-fluid
+        h1.text-center Our Location 
+        br
+        .map-responsive
+        iframe(src='https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France', width='100%', height='600px', frameborder='0', style='border:0', allowfullscreen='')
+            
+    .container-fluid.footer
+        .row
+            .col-md-4.col-sm-4.col-xs-4.footdes
+                h5 GET IN TOUCH
+                hr
+                p ADDRESS 
+                p Comsats University Islamabad, Lahore Campus
+                p MOBILE No
+                p +99999999999
+                p EMAIL
+                p abc@gmail.com
+            .col-md-4.col-sm-4.col-xs-4.footdes
+                h5 QUICK LINKS
+                hr
+                a(href="/")  HOME 
+                br 
+                br 
+                a(href="/login")  PLACE ORDER 
+                br
+                br 
+                a(href="/login")  SHOPPING CART 
+                br
+                br 
+                a(href="/register")  REGISTER NOW 
+                br
+                br 
+                a(href="/login")  LOGIN 
+                br
+                br 
+            .col-md-4.col-sm-4.col-xs-4.footdes
+                h5 STITCHINING INTRO
+                hr
+                p Stitching master is the best and fast online tailoring service in Karachi. We provide you with great suits that befit you and your lifestyle. Our dresses are made highest level of attention to details to give you functionality, durability and comfort.
+                br
+    

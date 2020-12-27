@@ -1,0 +1,26 @@
+extends ../layout 
+block content
+    .row
+        .col-sm-8
+             h1=title
+        .col-sm-4
+            a(href="/products/add", class="btn btn-success float-right" id="new_button") Book New Dress
+    table.table
+        thead
+            tr
+                th Name
+                th Address
+                th No. of Dresses
+                th Size
+                th Action
+        tbody
+            each product in products
+                tr
+                    td=product.name
+                    td=product.address
+                    td=product.dresses  
+                    td=product.size    
+                    td
+                        a(href="/products/delete"+product._id, class="btn btn-danger") Delete
+                        a(href="/products/edit"+product._id, class="btn btn-warning") Edit
+                        a(href="/products/cart"+product._id, class="btn btn-info") Add to Cart

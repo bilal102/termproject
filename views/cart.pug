@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 My Cart 
+  -var total=0
+  table.table
+    thead
+      th Name
+      th Address
+      th No. of Dresses
+      th size
+      th Action
+    tbody
+      each item in cart
+        - total+=Number(item.dresses)
+        tr
+          td=item.name
+          td=item.address
+          td=item.dresses
+          td=item.size
+          td
+            a(href="/products/cart/remove"+item._id, class="btn btn-danger") Remove Dress
+    tfoot
+      tr
+        td Total Dresses
+        td 
+        td=total
+        td 
+        td 
