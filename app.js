@@ -41,7 +41,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
+/*
 mongoose
   .connect(config.get("db"), {
     useNewUrlParser: true,
@@ -49,9 +49,9 @@ mongoose
   })
   .then(() => console.log("Connected to Mongo...."))
   .catch((error) => console.log(error.message));
+*/
 
 
-/*
 const db =
   " mongodb+srv://bilal2468:bilal2468@cluster0.9zbo7.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
@@ -69,5 +69,5 @@ mongoose
     // require("./models/addDummyData")();
   });
 
-*/
+
  module.exports = app;
